@@ -69,7 +69,7 @@ License:        MPLv1.1 or GPLv2+ or LGPLv2+
 Group:          Applications/Internet
 # You can get sources at ftp://ftp.mozilla.org/pub/firefox/releases/%{version}%{?pretag}/source
 #Source0:        %{shortname}-%{version}%{?pretag}.source.tar.bz2
-Source0:        ftp://el6.cloudlinux.com/pub/xulrunner5-5.0-1.el6.src.rpm/firefox-%{version}.source.tar.bz2
+Source0:        ftp://ftp.mozilla.org/pub/firefox/releases/5.0/source/firefox-%{version}.source.tar.bz2
 Source10:       %{shortname}-mozconfig
 Source11:       %{shortname}-mozconfig-debuginfo
 Source12:       %{shortname}-redhat-default-prefs.js

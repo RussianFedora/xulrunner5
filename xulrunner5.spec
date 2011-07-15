@@ -63,7 +63,7 @@
 Summary:        XUL Runtime for Gecko Applications
 Name:           %{shortname}5
 Version:        5.0
-Release:        1%{?pre_tag}%{?dist}
+Release:        1%{?pre_tag}%{?dist}.R
 URL:            http://developer.mozilla.org/En/XULRunner
 License:        MPLv1.1 or GPLv2+ or LGPLv2+
 Group:          Applications/Internet
@@ -101,11 +101,6 @@ Patch33:        firefox-4.0-gnome3.patch
 Patch34:        xulrunner-2.0-network-link-service.patch
 Patch35:        xulrunner-2.0-NetworkManager09.patch
 Patch36:        xulrunner-omnijar-5.patch
-
-# cairo-freeworld patches
-
-Patch41: cairo-respect-fontconfig.patch
-Patch42: cairo-1.10.0-buggy_gradients.patch
 
 # ---------------------------------------------------
 
@@ -271,11 +266,6 @@ sed -e 's/__RPM_VERSION_INTERNAL__/%{gecko_dir_ver}/' %{P:%%PATCH0} \
 %patch34 -p2 -b .network-link-service
 %patch35 -p1 -b .NetworkManager09
 %patch36 -p2 -b .omnijar
-
-pushd gfx/cairo/cairo
-%patch41 -p1 -b .respect-fontconfig
-%patch42 -p1 -b .buggy_gradients
-popd
 
 %{__rm} -f .mozconfig
 %{__cat} %{SOURCE10} \
@@ -587,6 +577,9 @@ fi
 #---------------------------------------------------------------------
 
 %changelog
+* Fri Jul 15 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 5.0-1
+- rebuilt for el6
+
 * Fri Jun 24 2011 Remi Collet <RPMS@FamilleCollet.com> - 5.0-1
 - sync with f15/rawhide
 - update to 5.0 finale

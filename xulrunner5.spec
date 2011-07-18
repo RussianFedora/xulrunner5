@@ -139,7 +139,7 @@ BuildRequires:  yasm
 %ifarch %{ix86} x86_64
 BuildRequires:  wireless-tools-devel
 %endif
-%if 0%{?fedora} >= 13
+%if 0%{?fedora} >= 13 || 0%{?rhel} > 5
 BuildRequires:  libcurl-devel
 BuildRequires:  libvpx-devel
 %endif

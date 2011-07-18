@@ -63,7 +63,7 @@
 Summary:        XUL Runtime for Gecko Applications
 Name:           %{shortname}5
 Version:        5.0
-Release:        1%{?pre_tag}%{?dist}.R
+Release:        1%{?pre_tag}.%{?dist}.R
 URL:            http://developer.mozilla.org/En/XULRunner
 License:        MPLv1.1 or GPLv2+ or LGPLv2+
 Group:          Applications/Internet
@@ -577,7 +577,7 @@ fi
 #---------------------------------------------------------------------
 
 %changelog
-* Fri Jul 15 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 5.0-1
+* Fri Jul 15 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 5.0-1.R
 - rebuilt for el6
 
 * Fri Jun 24 2011 Remi Collet <RPMS@FamilleCollet.com> - 5.0-1

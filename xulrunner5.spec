@@ -109,7 +109,7 @@ BuildRoot:      %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildRequires:  nspr-devel >= %{nspr_version}
 BuildRequires:  nss-devel >= %{nss_version}
 %endif
-%if 0%{?fedora} >= 15
+%if 0%{?fedora} >= 15 || 0%{?rhel} > 5
 BuildRequires:  cairo-devel >= %{cairo_version}
 %endif
 BuildRequires:  libpng-devel
@@ -179,7 +179,7 @@ Requires: %{name}%{?_isa} = %{version}-%{release}
 Requires: nspr-devel >= %{nspr_version}
 Requires: nss-devel >= %{nss_version}
 %endif
-%if 0%{?fedora} >= 15
+%if 0%{?fedora} >= 15 || 0%{?rhel} > 5
 Requires: cairo-devel >= %{cairo_version}
 %endif
 Requires: libjpeg-devel
@@ -577,7 +577,7 @@ fi
 #---------------------------------------------------------------------
 
 %changelog
-* Fri Jul 15 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 5.0-1.R
+* Fri Jul 15 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 5.0-1%{?dist}.R
 - rebuilt for el6
 
 * Fri Jun 24 2011 Remi Collet <RPMS@FamilleCollet.com> - 5.0-1
